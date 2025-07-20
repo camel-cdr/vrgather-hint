@@ -13,7 +13,7 @@
 # the Doc Template for RISC-V Extensions.
 
 DOCS := \
-	spec-sample.adoc
+	proposal.adoc
 
 DATE ?= $(shell date +%Y-%m-%d)
 VERSION ?= v0.0.0
@@ -58,8 +58,9 @@ OPTIONS := --trace \
            --failure-level=ERROR
 REQUIRES := --require=asciidoctor-bibtex \
             --require=asciidoctor-diagram \
-			--require=asciidoctor-lists \
-            --require=asciidoctor-mathematical
+            --require=asciidoctor-lists \
+            --require=asciidoctor-mathematical \
+            --require=asciidoctor-sail
 
 .PHONY: all build clean build-container build-no-container build-docs
 
